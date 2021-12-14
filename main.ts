@@ -1,14 +1,3 @@
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-	
-})
-function chamgeScore (Score: number) {
-    info.changeScoreBy(1)
-    music.beamUp.play()
-}
-let mySprite: Sprite = null
 scene.setBackgroundColor(9)
 let hahah = sprites.create(img`
     ........................
@@ -36,13 +25,3 @@ let hahah = sprites.create(img`
     .....ccccdd555dccccc....
     ........cccccccc........
     `, SpriteKind.Player)
-controller.moveSprite(hahah, 200, 200)
-mySprite.setStayInScreen(true)
-info.setLife(3)
-game.onUpdateInterval(500, function () {
-    while (info.life() > 0) {
-        mySprite.destroy()
-        mySprite.startEffect(effects.fire, 500)
-        chamgeScore(1)
-    }
-})
